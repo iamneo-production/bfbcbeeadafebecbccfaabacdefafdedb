@@ -54,6 +54,16 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>1.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>jspservlettest</finalName>
@@ -64,6 +74,13 @@
     <version>2.2</version>
     <configuration>
     <port>8080</port>
+    <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <classpathLayoutType>repository</classpathLayoutType>
+            </manifest>
+          </archive>
     </configuration> 
         </plugin>
  
@@ -71,3 +88,5 @@
   </build>
 
 </project>
+
+
